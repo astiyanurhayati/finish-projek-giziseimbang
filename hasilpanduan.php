@@ -1,16 +1,13 @@
 <?php
 // print_r($_POST);
 
-$Berat = $_POST ['berat'];
-$Tinggi = $_POST ['tinggi'];
-$Gender = $_POST['gender'];
-$Usia = $_POST ['usia'];
-$aktivitas = $_POST['aktivitas'];
+@$Berat = $_POST ['berat'];
+@$Tinggi = $_POST ['tinggi'];
+@$Gender = $_POST['gender'];
+@$Usia = $_POST ['usia'];
+@$aktivitas = $_POST['aktivitas'];
 
 
-
-$AkgPria = 66 + (13.7 * $Berat)+ (5 * $Tinggi) - (6.8 * $Usia);
-$AkgWanita = 655 + (9.6 * $Berat) + (1.8 * $Tinggi) - (4.7 * $Usia);
 $HasilAkg = 0;
 $GrLemak = 0;
 $Lemak = 0;
@@ -19,8 +16,28 @@ $GrProtein = 0;
 $Karbohidrat = 0;
 $GrKarbohidrat = 0;
 
+
+
  if(isset($_POST['hitung'])){
-        
+
+  $AkgPria = 66 + (13.7 * $Berat)+ (5 * $Tinggi) - (6.8 * $Usia);
+  $AkgWanita = 655 + (9.6 * $Berat) + (1.8 * $Tinggi) - (4.7 * $Usia);
+  $bmi = $Berat / (($Tinggi / 100) * ($Tinggi / 100));
+  $hasilbmi=  " ";
+
+   
+          //normal atau tidak
+          if($bmi < 17){
+            $hasilbmi = "Kurus";
+          }elseif ($bmi < 23 ){
+            $hasilbmi = "Normal";
+          }elseif ($bmi < 27 ){
+            $hasilbmi = "Kegemukan";
+          }elseif ($bmi > 27 ){
+            $hasilbmi = "Obesitas";
+          }
+
+    
           //menghitung Akg
           if($Gender == "pria"){
               if($aktivitas == "sangatjarang"){
@@ -48,8 +65,8 @@ $GrKarbohidrat = 0;
                 $HasilAkg = $AkgWanita * 1.9;
               }
 
-          }
-        
+            }
+          
         // Rincian kalori
         $Protein = 15 * $HasilAkg / 100;
         $Karbohidrat = 60 * $HasilAkg / 100;
@@ -59,6 +76,7 @@ $GrKarbohidrat = 0;
         $GrProtein = $Protein / 4;
         $GrKarbohidrat = $Karbohidrat /4;
         $GrLemak = $Lemak / 9;
+
       
 }
 ?>
@@ -77,10 +95,13 @@ $GrKarbohidrat = 0;
   </head>
   <body>
     <main>
-      <h1>
+      <h2>Kondisi Tubuh Anda Sekarang:</h2>
+      <h1> <span> <?php echo @$hasilbmi; ?> </span></h1>
+
+      <h2>
         Angka Kecukupan Gizi Anda adalah: <br /><span>
         <?php echo ceil($HasilAkg)."*"; ?> </span> kalori per hari
-      </h1>
+      </h2>
      <br>
 
     </h3>
@@ -92,7 +113,7 @@ $GrKarbohidrat = 0;
       </ul>
       <h5>*Untuk menghitung kebutuhan gizi, kami menggunakan rumus <span> <a href="https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation" target='_blank'> Harris Benedict</a></span></h5>
       <div class="btn">
-        <a href="panduan.html"> BACK </a>
+        <a href="panduan.php"> BACK </a>
       </div>
     </main>
     <div class="clear"></div>

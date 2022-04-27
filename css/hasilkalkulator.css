@@ -29,3 +29,9 @@ main img {
 .btn a:hover {
   background-color: #966a28;
 }
+
+@media screen and (max-width: 680px) {
+  main img {
+    width: 200px;
+  }
+}

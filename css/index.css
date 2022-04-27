@@ -115,7 +115,7 @@ header img {
   padding-top: 100px;
 }
 .kiri {
-  margin-top: 30px;
+  margin-top: 120px;
 }
 .clear {
   clear: both;
@@ -133,6 +133,9 @@ header img {
 }
 .isi-icon-kiri a:hover {
   color: wheat;
+}
+.isi-icon-kanan a:hover {
+  color: white;
 }
 .isi-icon-kanan,
 .isi-icon-kiri {
@@ -178,7 +181,7 @@ footer h3 {
   font-weight: 100;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 680px) {
   .closebtn {
     display: none;
   }
@@ -234,6 +237,7 @@ footer h3 {
     position: absolute;
     top: 3%;
     color: #c5934a;
+    font-weight: 100;
   }
 
   header nav {
@@ -318,11 +322,16 @@ footer h3 {
   }
   .kontak {
     margin: auto;
+
+    margin-left: 50px;
   }
   .kontak .iconkanan {
     margin-top: 30px;
   }
   footer {
     font-size: 13px;
+  }
+  .tengah {
+    text-align: center;
   }
 }

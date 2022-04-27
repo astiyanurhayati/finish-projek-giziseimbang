@@ -83,7 +83,7 @@ $menu = array(
 
 $nama = null;
 $kalori= 0;
-$tampilnama = "pilih makanan yang anda konsumsi terlebih dahulu";
+$tampilnama = "<i>Pilih makanan yang anda konsumsi terlebih dahulu</i>";
 $tampilkalori = "Data Kosong";
 @$JumlahKalori = $_POST['JumlahKalori'];
 
@@ -117,7 +117,7 @@ if (isset($_POST['submit'])){
       <h2 style="color: orange";><?php echo $tampilkalori; ?></h2>
       <h3><?php echo $tampilnama?></h3>
       <div class="btn">
-        <a href="kalkulator.html"> BACK </a>
+        <a href="kalkulator.php"> BACK </a>
       </div>
     </main>
 

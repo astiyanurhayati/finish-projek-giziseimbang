@@ -21,9 +21,9 @@
               <a href="index.html">Home</a>
             </li>
             <li><a href="pengenalan.html">Pengenalan</a></li>
-            <li><a href="panduan.html">Panduan</a></li>
+            <li><a href="panduan.php">Panduan</a></li>
             <li>
-              <a href="kalkulator.html"> <span>Kalkulator</span> </a>
+              <a href="kalkulator.php"> <span>Kalkulator</span> </a>
             </li>
           </ul>
         </div>

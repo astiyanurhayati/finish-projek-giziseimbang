@@ -196,7 +196,7 @@ form .lauk-pauk {
   justify-content: flex-start;
   align-items: flex-start;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 680px) {
   .closebtn {
     display: none;
   }
@@ -207,6 +207,7 @@ form .lauk-pauk {
 @media screen and (max-width: 680px) {
   .click {
     color: #c5934a;
+    margin: 3px;
   }
   .closebtn {
     position: absolute;
@@ -246,8 +247,9 @@ form .lauk-pauk {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 3%;
+    top: 2%;
     color: #c5934a;
+    font-weight: 100;
   }
   header img {
     width: 50px;
